@@ -1,0 +1,19 @@
+# default
+*~
+
+# netbeans
+build
+dist
+private
+nbactions.xml
+
+# maven
+target
+
+# jasper
+*.jasper
+
+
+# idea
+.idea
+*.iml
