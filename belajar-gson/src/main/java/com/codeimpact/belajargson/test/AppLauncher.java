@@ -20,10 +20,16 @@ public class AppLauncher {
         person.setAge(26);
         person.setMessage(Arrays.asList("Uzumaki Naruto", "Uchiha Sasuke", "Hatake Kakashi", "Jackson Michael"));
 
-        String json = JsonUtil.convertPersonToJson(person);
-        System.out.println(json);
+        String jsonCompact = JsonUtil.convertPersonToJson(person, false);
+        System.out.println("Json compact:");
+        System.out.println(jsonCompact);
 
-        Person fromJson = JsonUtil.getPersonFromJson(json);
+
+        String jsonPretty = JsonUtil.convertPersonToJson(person, true);
+        System.out.println("\nJson prettyprint:");
+        System.out.println(jsonPretty);
+
+        Person fromJson = JsonUtil.getPersonFromJson(jsonPretty);
         System.out.println(fromJson);
     }
 }
